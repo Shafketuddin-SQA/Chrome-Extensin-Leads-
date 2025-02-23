@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Google Search Checkbox",
+    "version": "1.0",
+    "description": "Add checkboxes next to Google search results to collect URLs.",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.google.com/search*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    }
+  }
+  
